@@ -1,0 +1,26 @@
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #faded4;
+  }
+  
+  .nav-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-logo img {
+    height: 100px;
+    margin-right: 20px;
+  }
+
+  
+  @media (max-width: 768px) {
+    .nav-logo img {
+      height: 40px;
+    }
+  }
+  
