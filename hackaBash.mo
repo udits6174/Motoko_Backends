@@ -15,6 +15,7 @@ actor {
     organiser_details : Text;
     organiser_email : Text;
     hackathon_details : Text; //set of rules and regulations, tracks and themes
+    location: Text;  //virtual or in-person location
     registration_start : Text;
     registration_end : Text;
     hackathon_start : Text;
@@ -36,6 +37,7 @@ actor {
     _organiser_details : Text,
     _organiser_email : Text,
     _hackathon_details : Text,
+    _location: Text,
     _registration_start : Text,
     _registration_end : Text,
     _hackathon_start : Text,
@@ -52,6 +54,7 @@ actor {
       organiser_details = _organiser_details;
       organiser_email = _organiser_email;
       hackathon_details = _hackathon_details;
+      location = _location;
       registration_start = _registration_start;
       registration_end = _registration_end;
       hackathon_start = _hackathon_start;
