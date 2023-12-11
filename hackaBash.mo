@@ -11,6 +11,7 @@ actor {
   //Types
   type Hackathon = {
     id : Nat;
+    hackathon_name : Text;
     organiser_name : Text;
     organiser_details : Text;
     organiser_email : Text;
@@ -33,6 +34,7 @@ actor {
   let organiserToParticipants = TrieMap.TrieMap<Principal, Buffer.Buffer<Principal>>(principalComp, principalHash);
   //Function to list a hackathon by an organisation
   public shared ({ caller }) func listHackathon(
+    _hackathon_name : Text,
     _organiser_name : Text,
     _organiser_details : Text,
     _organiser_email : Text,
@@ -50,6 +52,7 @@ actor {
     // };
     let thisHackathon : Hackathon = {
       id = hackathon_id;
+      hackathon_name = _hackathon_name;
       organiser_name = _organiser_name;
       organiser_details = _organiser_details;
       organiser_email = _organiser_email;
