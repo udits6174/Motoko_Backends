@@ -94,7 +94,10 @@ actor {
       };
     };
   };
-
+  //get current id
+  public func getCurrentId() : async Nat{
+    return hackathon_id;
+  }
   //get hackathon by id
   public func getHackathonById(hack_id : Nat) : async Result.Result<Hackathon, Text> {
     switch (idToHackathon.get(hack_id)) {
